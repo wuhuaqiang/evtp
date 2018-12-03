@@ -1,0 +1,835 @@
+[INFO][2018-11-27 13:09:43] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 291876 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 13:09:43] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 13:09:43] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:09:43 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:09:43] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 13:09:44] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:09:44] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:09:44] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34f110d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 2383 ms 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 13:09:45] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 13:09:47] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 13:09:47] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:09:47] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 13:09:47] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 13:09:47] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 13:09:47] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 13:09:47] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 13:09:48] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 13:09:48] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:09:43 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:09:49] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:09:43 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 13:09:49] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 13:09:49] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 13:09:49] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 13:09:49] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 13:09:50] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 13:09:50] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 7.389 seconds (JVM running for 8.505) 
+[INFO][2018-11-27 13:10:05] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 13:10:05] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+[INFO][2018-11-27 13:10:58] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 619188 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 13:10:58] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 13:10:58] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:10:58 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:10:58] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 13:10:59] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:10:59] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:10:59] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ba7ac542] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:10:59] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 13:10:59] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1299 ms 
+[INFO][2018-11-27 13:10:59] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 13:11:00] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 13:11:00] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 13:11:00] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 13:11:00] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 13:11:00] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 13:11:00] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:11:00] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 13:11:00] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 13:11:00] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 13:11:00] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 13:11:00] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 13:11:00] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 13:11:01] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:10:58 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:11:01] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:10:58 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 13:11:01] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 13:11:01] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 13:11:01] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 13:11:01] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 13:11:01] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 13:11:01] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 3.609 seconds (JVM running for 4.304) 
+[INFO][2018-11-27 13:11:08] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 13:11:08] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+[INFO][2018-11-27 13:16:35] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 76656 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 13:16:35] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 13:16:35] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:16:35 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:16:36] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 13:16:36] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:16:36] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:16:36] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f295a5a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1310 ms 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 13:16:37] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 13:16:38] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 13:16:38] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:16:38] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 13:16:38] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 13:16:38] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 13:16:38] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 13:16:38] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 13:16:38] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 13:16:38] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:16:35 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 13:16:38] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:16:39] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:16:35 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 13:16:39] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 13:16:39] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 13:16:39] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 13:16:39] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 13:16:39] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 13:16:39] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 3.591 seconds (JVM running for 4.228) 
+[INFO][2018-11-27 13:16:45] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 13:16:45] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+[INFO][2018-11-27 13:18:19] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 122832 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 13:18:19] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 13:18:19] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:18:19 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:18:20] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 13:18:20] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:18:20] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:18:20] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c56bd457] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1479 ms 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 13:18:21] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 13:18:21] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 13:18:21] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:18:21] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 13:18:21] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 13:18:21] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 13:18:21] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 13:18:21] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 13:18:21] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 13:18:22] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:18:19 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 13:18:22] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:18:23] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 13:18:19 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 13:18:23] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 13:18:23] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 13:18:23] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 13:18:23] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 13:18:23] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 13:18:23] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 3.961 seconds (JVM running for 4.585) 
+[INFO][2018-11-27 13:18:27] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 13:18:27] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms 
+[INFO][2018-11-27 13:20:07] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 204900 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 13:20:07] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 13:20:07] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:20:07 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:20:07] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 13:20:08] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:20:08] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:20:08] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3a5fcdf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1313 ms 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 13:20:08] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 13:20:09] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 13:20:09] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:20:09] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 13:20:09] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 13:20:09] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 13:20:09] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 13:20:09] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 13:20:09] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 13:20:09] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:20:07 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 13:20:10] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 13:20:07 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 13:20:10] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 13:20:10] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 13:20:10] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 13:20:10] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 13:20:10] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 13:20:10] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 3.518 seconds (JVM running for 4.1) 
+[INFO][2018-11-27 13:20:20] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 13:20:20] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms 
+[INFO][2018-11-27 15:18:09] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 458460 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:18:09] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:18:09] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 15:18:09 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:18:10] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:18:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:18:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:18:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$14f8caf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 2470 ms 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:18:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:18:13] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:18:13] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:18:13] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:18:14] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:18:14] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:18:14] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:18:14] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:18:14] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:18:14] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 15:18:09 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:18:15] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:18:16] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1445d7f: startup date [Tue Nov 27 15:18:09 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:18:16] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:18:16] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:18:16] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:18:16] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:18:16] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:18:16] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 7.098 seconds (JVM running for 8.388) 
+[INFO][2018-11-27 15:18:30] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:18:30] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms 
+[INFO][2018-11-27 15:21:15] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 561116 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:21:15] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:21:15] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:21:15 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:21:15] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:21:16] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:21:16] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:21:16] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e089387] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1758 ms 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:21:17] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:21:18] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:21:18] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:21:18] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:21:18] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:21:18] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:21:18] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:21:18] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:21:18] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:21:18] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:21:15 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(java.lang.String) 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:21:19] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:21:15 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:21:19] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:21:19] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:21:19] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:21:19] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:21:19] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:21:19] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 4.745 seconds (JVM running for 5.518) 
+[INFO][2018-11-27 15:21:24] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:21:24] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+[INFO][2018-11-27 15:37:12] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 299236 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:37:12] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:37:12] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:37:12 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:37:12] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:37:13] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:37:13] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:37:13] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad9ce8b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1515 ms 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:37:13] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:37:14] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:37:15] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:37:15] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:37:15] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:37:15] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:37:15] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:37:15] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:37:15] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:37:15] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:37:12 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:37:16] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a396c1e: startup date [Tue Nov 27 15:37:12 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:37:16] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:37:16] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:37:16] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:37:16] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:37:16] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:37:16] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 4.822 seconds (JVM running for 5.55) 
+[INFO][2018-11-27 15:37:33] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:37:33] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms 
+[INFO][2018-11-27 15:39:10] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 305224 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:39:10] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:39:10] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:39:10 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:39:11] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:39:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:39:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:39:11] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca84272] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1928 ms 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:39:12] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:39:13] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:39:13] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:39:13] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:39:13] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:39:13] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:39:13] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:39:13] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:39:13] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:39:13] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:39:10 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:39:14] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:39:10 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:39:14] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:39:14] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:39:14] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:39:14] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:39:15] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:39:15] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 4.867 seconds (JVM running for 5.727) 
+[INFO][2018-11-27 15:39:23] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:39:23] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms 
+[INFO][2018-11-27 15:42:22] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 442892 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:42:22] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:42:22] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:42:22 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:42:22] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:42:23] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:42:23] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:42:23] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9f23ae99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1991 ms 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:42:24] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:42:25] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:42:25] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:42:25] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:42:25] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:42:25] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:42:25] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:42:25] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:42:25] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:42:25] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:42:22 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:42:26] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:42:27] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:42:22 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:42:27] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:42:27] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:42:27] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:42:27] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:42:27] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:42:27] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 5.308 seconds (JVM running for 6.128) 
+[INFO][2018-11-27 15:42:30] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:42:30] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms 
+[INFO][2018-11-27 15:43:32] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 634872 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:43:32] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:43:32] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:43:32 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:43:33] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:43:34] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:43:34] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:43:34] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$82108f64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:43:34] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:43:34] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1864 ms 
+[INFO][2018-11-27 15:43:35] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:43:35] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:43:35] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:43:35] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:43:35] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:43:35] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:43:35] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:43:35] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:43:35] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:43:35] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:43:35] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:43:35] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:43:35] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:43:36] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:43:32 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:43:36] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:43:37] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:43:37] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:43:37] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:43:32 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:43:37] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:43:37] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:43:37] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:43:37] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:43:37] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:43:37] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 5.022 seconds (JVM running for 5.79) 
+[INFO][2018-11-27 15:43:41] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:43:41] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms 
+[ERROR][2018-11-27 15:43:43] com.alibaba.druid.filter.logging.Log4jFilter.statementLogError(Log4jFilter.java:152) {conn-10005, pstmt-20005} execute error. SELECT
+         
+        id, name, start_point AS startPoint, end_point AS endPoint, start_point_val AS startPointVal, end_point_val AS endPointVal, end_time AS endTime, start_time AS startTime, ower_id AS owerId, sort, remark
+     
+        FROM T_LINE
+        where ower_id =? ORDER BY sort 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'evtp.T_LINE' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:600)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy86.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy84.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:136)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy75.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy77.selectLineByUserId(Unknown Source)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl.selectLineByUserId(TLineServiceImpl.java:28)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl$$FastClassBySpringCGLIB$$5c2e45da.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:652)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl$$EnhancerBySpringCGLIB$$6fc5a7f.selectLineByUserId(<generated>)
+	at com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(TLineController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-11-27 15:43:43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317) Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+[INFO][2018-11-27 15:43:43] org.springframework.jdbc.support.SQLErrorCodesFactory.<init>(SQLErrorCodesFactory.java:127) SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana] 
+[ERROR][2018-11-27 15:44:46] com.alibaba.druid.filter.logging.Log4jFilter.statementLogError(Log4jFilter.java:152) {conn-10005, pstmt-20005} execute error. SELECT
+         
+        id, name, start_point AS startPoint, end_point AS endPoint, start_point_val AS startPointVal, end_point_val AS endPointVal, end_time AS endTime, start_time AS startTime, ower_id AS owerId, sort, remark
+     
+        FROM T_LINE
+        where ower_id =? ORDER BY sort 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'evtp.T_LINE' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:600)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy86.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy84.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:136)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy75.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy77.selectLineByUserId(Unknown Source)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl.selectLineByUserId(TLineServiceImpl.java:28)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl$$FastClassBySpringCGLIB$$5c2e45da.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:652)
+	at com.hhdl.evtp.service.Impl.TLineServiceImpl$$EnhancerBySpringCGLIB$$6fc5a7f.selectLineByUserId(<generated>)
+	at com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(TLineController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-11-27 15:44:51] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 415168 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:44:52] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:44:52] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:44:52 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:44:52] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:44:53] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:44:53] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:44:53] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa024291] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:44:53] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:44:53] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1659 ms 
+[INFO][2018-11-27 15:44:54] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:44:54] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:44:54] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:44:54] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:44:54] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:44:54] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:44:54] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:44:54] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:44:54] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:44:54] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:44:54] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:44:54] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:44:54] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:44:55] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:44:52 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:44:56] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:44:52 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:44:56] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:44:56] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:44:56] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:44:56] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:44:56] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:44:56] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 5.179 seconds (JVM running for 6.137) 
+[INFO][2018-11-27 15:45:00] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:45:00] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms 
+[INFO][2018-11-27 15:50:23] org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) Starting EvtpApplication on DESKTOP-K5PLSKS with PID 383640 (E:\workSpaces\evtp\target\classes started by BH in E:\workSpaces\evtp) 
+[INFO][2018-11-27 15:50:23] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:641) The following profiles are active: dev 
+[INFO][2018-11-27 15:50:23] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582) Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:50:23 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:50:24] org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) HV000001: Hibernate Validator 5.3.4.Final 
+[INFO][2018-11-27 15:50:25] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:50:25] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:50:25] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:325) Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c6ed1ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) Tomcat initialized with port(s): 8080 (http) 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) Root WebApplicationContext: initialization completed in 1563 ms 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) Mapping servlet: 'dispatcherServlet' to [/] 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'characterEncodingFilter' to: [/*] 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+[INFO][2018-11-27 15:50:25] org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) Mapping filter: 'requestContextFilter' to: [/*] 
+[INFO][2018-11-27 15:50:26] com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715) {dataSource-1} inited 
+[INFO][2018-11-27 15:50:26] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:349) Building JPA container EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:50:26] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+[INFO][2018-11-27 15:50:26] org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.0.11.Final} 
+[INFO][2018-11-27 15:50:26] org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found 
+[INFO][2018-11-27 15:50:26] org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist 
+[INFO][2018-11-27 15:50:26] org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+[INFO][2018-11-27 15:50:26] org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+[INFO][2018-11-27 15:50:27] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:382) Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:50:23 CST 2018]; root of context hierarchy 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/test/getName]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TestController.listAllProvince() 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/save]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.saveLine(com.hhdl.evtp.model.TLine) 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/list]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getPage() 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/getLineByUserId]}" onto public java.util.List<com.hhdl.evtp.model.TLine> com.hhdl.evtp.controller.rest.TLineController.getLineByUserId(java.lang.String) 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/tLine/delbyId]}" onto public java.lang.String com.hhdl.evtp.controller.rest.TLineController.delbyId(java.lang.String) 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) Detected @ExceptionHandler methods in dataExceptionAdvice 
+[INFO][2018-11-27 15:50:27] org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:354) Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+[INFO][2018-11-27 15:50:28] org.springframework.ui.freemarker.SpringTemplateLoader.<init>(SpringTemplateLoader.java:61) SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d0399f4: startup date [Tue Nov 27 15:50:23 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/] 
+[INFO][2018-11-27 15:50:28] org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+[INFO][2018-11-27 15:50:28] org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) Registering beans for JMX exposure on startup 
+[INFO][2018-11-27 15:50:28] org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) Bean with name 'dataSource' has been autodetected for JMX exposure 
+[INFO][2018-11-27 15:50:28] org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource] 
+[INFO][2018-11-27 15:50:28] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:192) Tomcat started on port(s): 8080 (http) 
+[INFO][2018-11-27 15:50:28] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) Started EvtpApplication in 5.078 seconds (JVM running for 5.927) 
+[INFO][2018-11-27 15:50:50] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) FrameworkServlet 'dispatcherServlet': initialization started 
+[INFO][2018-11-27 15:50:50] org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms 
