@@ -5,13 +5,14 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.hhdl.evtp.model.TLine;
+import com.hhdl.evtp.model.TUser;
 import com.hhdl.evtp.service.TLineService;
+import com.hhdl.evtp.service.TUserService;
 import com.hhdl.evtp.util.UUIDKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * <p>
@@ -26,11 +27,13 @@ import java.util.UUID;
 public class TLineController {
     @Autowired
     private TLineService tLineService;
+    @Autowired
+    private TUserService tUserService;
 
     @RequestMapping("/list")
     public List<TLine> getPage() {
         Wrapper<TLine> tLineWrapper = new EntityWrapper<TLine>();
-        tLineWrapper.orderBy("ower_id", true).orderBy("sort", true);
+        tLineWrapper.where("name={0}", "Line1").orderBy("ower_id", true).orderBy("sort", true);
         return tLineService.selectList(tLineWrapper);
     }
 
@@ -62,6 +65,21 @@ public class TLineController {
     @RequestMapping("/getLineByUserId")
     public List<TLine> getLineByUserId(@RequestParam String userId) {
         return tLineService.selectLineByUserId(userId);
+    }
+
+    @RequestMapping("/getAllLineGroupByUserId")
+    public List getAllLineGroupByUserId() {
+        Wrapper<TUser> tUserWrapper = new EntityWrapper<TUser>();
+        List<Map> list = new ArrayList<>();
+        List<TUser> tUsers = tUserService.selectList(tUserWrapper);
+        for (TUser tUser : tUsers) {
+            List<TLine> tLines = tLineService.selectLineByUserId(tUser.getId());
+            Map<String, Object> map = new HashMap<>();
+            map.put("userLines", tLines);
+            map.put("userId", tUser.getId());
+            list.add(map);
+        }
+        return list;
     }
 }
 

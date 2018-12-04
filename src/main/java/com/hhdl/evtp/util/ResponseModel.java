@@ -6,15 +6,16 @@ public class ResponseModel<T> {
     private String msg;
     private T data;
 
-    public ResponseModel(){
+    public ResponseModel() {
 
     }
 
-    public ResponseModel(boolean status, String msg, T data){
+    public ResponseModel(boolean status, String msg, T data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
+
     public boolean isStatus() {
         return status;
     }

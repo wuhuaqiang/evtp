@@ -11,19 +11,21 @@ import java.util.UUID;
 public class UUIDKey {
     /**
      * 生成主键id--32位字符
+     *
      * @return
      */
-    public static String getKey(){
-        return UUID.randomUUID().toString().replaceAll("-","");
+    public static String getKey() {
+        return UUID.randomUUID().toString().replaceAll("-", "");
     }
 
     /**
      * 获取当前的时间返回string
+     *
      * @return
      */
-    public static String getDate(){
+    public static String getDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date=sdf.format(new Date());
+        String date = sdf.format(new Date());
         return date;
     }
 }
