@@ -77,7 +77,7 @@ public class TChargingStationController {
         tChargingStationWrapper.where("name={0}", name);
         List<TChargingStation> tChargingStations = tChargingStationService.selectList(tChargingStationWrapper);
         for (TChargingStation tChargingStation : tChargingStations) {
-            tChargingPileWrapper.where("cs_id={0}", tChargingStation.getId());
+            tChargingPileWrapper.where("cs_id={0}", tChargingStation.getId()).orderBy("name",true);
             List<TChargingPile> tChargingPiles = tChargingPileService.selectList(tChargingPileWrapper);
             TChargingStationwithCp stationwithCp = new TChargingStationwithCp();
             MyBeanUtils.copyProperties(tChargingStation, stationwithCp);

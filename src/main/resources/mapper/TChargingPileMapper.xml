@@ -13,6 +13,7 @@
         <result column="create_time" property="createTime"/>
         <result column="run_time" property="runTime"/>
         <result column="cs_id" property="csId"/>
+        <result column="state" property="state"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -34,6 +35,7 @@
         run_time
         AS
         runTime,
+        state,
         cs_id
         As
         csId

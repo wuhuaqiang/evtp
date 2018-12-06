@@ -39,6 +39,15 @@ public class TChargingPile extends Model<TChargingPile> {
     private Date runTime;
     @TableField("cs_id")
     private String csId;
+    private String state;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
 
     public String getCsId() {
         return csId;
