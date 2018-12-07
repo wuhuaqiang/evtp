@@ -30,5 +30,19 @@
         state,
         remark
     </sql>
+    <select id="selectListWithUserId" resultType="map">
+        select ev.id,
+               ev.power,
+               ev.battery_capacity as batteryCapacity,
+               ev.position,
+               ev.position_val     as positionVal,
+               ev.speed,
+               ev.state,
+               ev.remark,
+               u.id                as userId,
+               u.name              as userName
+        from t_electric_vehicle ev
+                 join t_user u on ev.id = u.ev_id
+    </select>
 
 </mapper>

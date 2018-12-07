@@ -4,7 +4,11 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.hhdl.evtp.dao.TElectricVehicleDao;
 import com.hhdl.evtp.model.TElectricVehicle;
 import com.hhdl.evtp.service.TElectricVehicleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -16,5 +20,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TElectricVehicleServiceImpl extends ServiceImpl<TElectricVehicleDao, TElectricVehicle> implements TElectricVehicleService {
+    @Autowired
+    private TElectricVehicleDao tElectricVehicleDao;
 
+    @Override
+    public List<Map> selectListWithUserId() {
+        return tElectricVehicleDao.selectListWithUserId();
+    }
 }
