@@ -33,7 +33,8 @@ public class TLineController {
     @RequestMapping("/list")
     public List<TLine> getPage() {
         Wrapper<TLine> tLineWrapper = new EntityWrapper<TLine>();
-        tLineWrapper.where("name={0}", "Line1").orderBy("ower_id", true).orderBy("sort", true);
+//        tLineWrapper.where("name={0}", "Line1").orderBy("ower_id", true).orderBy("sort", true);
+        tLineWrapper.orderBy("ower_id", true).orderBy("sort", true);
         return tLineService.selectList(tLineWrapper);
     }
 

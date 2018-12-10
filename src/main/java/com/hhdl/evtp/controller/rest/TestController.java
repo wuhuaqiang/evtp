@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/test")
@@ -38,6 +39,7 @@ public class TestController {
 
         return "success";
     }
+
 
     private void saveCs() {
         TChargingStation tChargingStation = new TChargingStation();
@@ -71,6 +73,7 @@ public class TestController {
         }
     }
 
+    @RequestMapping(value = "/savelines")
     private void savelines() {
         TLine tLine = new TLine();
         Wrapper<TUser> entityWrapper = new EntityWrapper<TUser>();
@@ -83,20 +86,25 @@ public class TestController {
             tLine.setOwerId(tUserService.selectList(entityWrapper).get(i).getId());
             for (int j = 0; j < 3; j++) {
                 tLine.setId(UUIDKey.getKey());
+                Random r = new Random();
 
                 if (startPoint == null) {
-                    tLine.setStartPoint(tChargingStationService.selectList(entityWrapper2).get(10 - i).getPosition());
-                    tLine.setStartPointVal(tChargingStationService.selectList(entityWrapper2).get(10 - i).getPositionVal());
+                    int s = r.nextInt(9);
+                    tLine.setStartPoint(tChargingStationService.selectList(entityWrapper2).get(s).getPosition());
+                    tLine.setStartPointVal(tChargingStationService.selectList(entityWrapper2).get(s).getPositionVal());
                 } else {
                     tLine.setStartPoint(startPoint);
                     tLine.setStartPointVal(startPointVal);
                 }
-                tLine.setEndPoint(tChargingStationService.selectList(entityWrapper2).get(i).getPosition());
-                tLine.setEndPointVal(tChargingStationService.selectList(entityWrapper2).get(i).getPositionVal());
+                int e = r.nextInt(9);
+                tLine.setEndPoint(tChargingStationService.selectList(entityWrapper2).get(e).getPosition());
+                tLine.setEndPointVal(tChargingStationService.selectList(entityWrapper2).get(e).getPositionVal());
                 startPoint = tLine.getEndPoint();
                 startPointVal = tLine.getEndPointVal();
                 tLine.setName("Line" + (j + 1));
-                tLine.setStartTime((j * 2 + 5) + ":" + "00");
+                int h = r.nextInt(23);
+                int m = r.nextInt(59);
+                tLine.setStartTime(((h < 10) ? ("0" + h) : h) + ":" + ((m < 10) ? ("0" + m) : m));
                 tLine.setEndTime((j * 2 + 5 + 4) + ":" + "05");
                 tLine.setSort((i + 1) * 10 + (j + 1));
                 tLine.setRemark("备注");
