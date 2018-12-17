@@ -73,8 +73,11 @@ public class TTransactionController {
 
 
     @RequestMapping("/page")
-    public Page getAllLineGroupByUserId() {
-        Page<TTransaction> page = new Page<TTransaction>(1,5);
+    public Page getPages(@RequestBody Map map) {
+        int pages = (int) map.get("page");
+        int size = (int) map.get("size");
+
+        Page<TTransaction> page = new Page<TTransaction>(pages, size);
         return tTransactionService.selectPage(page);
     }
 }
