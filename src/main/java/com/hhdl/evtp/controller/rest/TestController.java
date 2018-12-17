@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 @RestController
@@ -25,6 +26,8 @@ public class TestController {
     private TUserService tUserService;
     @Autowired
     private TElectricVehicleService tElectricVehicleService;
+    @Autowired
+    private TTransactionService tTransactionService;
 
     @RequestMapping(value = "/test")
     public String listAllProvince() {
@@ -111,6 +114,25 @@ public class TestController {
                 tLineService.insertOrUpdate(tLine);
             }
 
+        }
+    }
+
+    @RequestMapping(value = "/saveTransaction")
+    private void saveTransaction() {
+        Wrapper<TElectricVehicle> entityWrapper = new EntityWrapper<TElectricVehicle>();
+        List<TElectricVehicle> tElectricVehicles = tElectricVehicleService.selectList(entityWrapper);
+        Wrapper<TChargingStation> tChargingStationWrapper = new EntityWrapper<TChargingStation>();
+        List<TChargingStation> tChargingStations = tChargingStationService.selectList(tChargingStationWrapper);
+        TTransaction tTransaction = new TTransaction();
+        for (int i = 0; i < tChargingStations.size(); i++) {
+            tTransaction.setTxId(UUIDKey.getKey());
+            tTransaction.setBlockNumber(i + 1);
+            tTransaction.setTxFrom(tElectricVehicles.get(i).getId());
+            tTransaction.setTxTo(tChargingStations.get(i).getId());
+            tTransaction.setTxPower(new Random().nextDouble());
+            tTransaction.setTxValue(new Random().nextDouble());
+            tTransaction.setTxTime(new Date());
+            tTransactionService.insertOrUpdate(tTransaction);
         }
     }
 
