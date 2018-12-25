@@ -78,7 +78,9 @@ public class TTransactionController {
         int size = (int) map.get("size");
 
         Page<TTransaction> page = new Page<TTransaction>(pages, size);
-        return tTransactionService.selectPage(page);
+        Wrapper<TTransaction> tTransactionWrapper = new EntityWrapper<TTransaction>();
+        tTransactionWrapper.orderBy("block_number", true);
+        return tTransactionService.selectPage(page, tTransactionWrapper);
     }
 }
 
