@@ -66,6 +66,7 @@ public class TElectricVehicleController {
             electricVehicle.setPositionVal(tElectricVehicle.getPositionVal());
             electricVehicle.setPosition(tElectricVehicle.getPosition());
             electricVehicle.setPosition(tElectricVehicle.getPosition());
+            electricVehicle.setPower(tElectricVehicle.getPower()+electricVehicle.getPower());
             tElectricVehicleService.insertOrUpdate(electricVehicle);
         } catch (Exception e) {
             System.out.println(e);
