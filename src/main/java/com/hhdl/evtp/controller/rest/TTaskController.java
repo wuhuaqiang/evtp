@@ -37,7 +37,7 @@ public class TTaskController {
     }
 
     @RequestMapping("/currTaskList")
-    public List<TTask> getcurrTaskList(String owerIds) {
+    public List<TTask> getcurrTaskList(@RequestBody String owerIds) {
         List<TTask> tTasks = new ArrayList<TTask>();
         String[] owerIdsArr = owerIds.split(",");
         for (int i = 0; i < owerIdsArr.length; i++) {
@@ -49,8 +49,13 @@ public class TTaskController {
         return tTasks;
     }
 
+    @RequestMapping("/lastTaskByOwerId")
+    public TTask lastTaskByOwerId(@RequestBody String owerId) {
+        return getOwerNewTask(owerId);
+    }
+
     @RequestMapping("/currTaskByOwerId")
-    public TTask currTaskByOwerId(String owerId) {
+    public TTask currTaskByOwerId(@RequestBody String owerId) {
         return getOwerTask(owerId);
     }
 
@@ -60,7 +65,7 @@ public class TTaskController {
             if (tTask.getId() == null) {
                 tTask.setId(UUIDKey.getKey());
             }
-            tTaskService.insertOrUpdate(tTask);
+            tTaskService.insert(tTask);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -93,6 +98,19 @@ public class TTaskController {
         Wrapper<TTask> tTaskWrapper = new EntityWrapper<TTask>();
         tTaskWrapper.where("ower_id={0}", owerId).and("state=0")
                 .orderBy("sort", true);
+        List<TTask> tTasks = tTaskService.selectList(tTaskWrapper);
+        if (tTasks.size() > 0) {
+            return tTasks.get(0);
+        } else {
+            return null;
+        }
+
+    }
+
+    private TTask getOwerNewTask(String owerId) {
+        Wrapper<TTask> tTaskWrapper = new EntityWrapper<TTask>();
+        tTaskWrapper.where("ower_id={0}", owerId).and("state=0")
+                .orderBy("sort", false);
         List<TTask> tTasks = tTaskService.selectList(tTaskWrapper);
         if (tTasks.size() > 0) {
             return tTasks.get(0);
