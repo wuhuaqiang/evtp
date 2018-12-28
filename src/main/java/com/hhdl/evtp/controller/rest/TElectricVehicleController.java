@@ -66,7 +66,7 @@ public class TElectricVehicleController {
             electricVehicle.setPositionVal(tElectricVehicle.getPositionVal());
             electricVehicle.setPosition(tElectricVehicle.getPosition());
             electricVehicle.setPosition(tElectricVehicle.getPosition());
-            electricVehicle.setPower(tElectricVehicle.getPower()+electricVehicle.getPower());
+            electricVehicle.setPower(tElectricVehicle.getPower() + electricVehicle.getPower());
             tElectricVehicleService.insertOrUpdate(electricVehicle);
         } catch (Exception e) {
             System.out.println(e);
@@ -122,6 +122,12 @@ public class TElectricVehicleController {
 
         return vehicleWithLine;
 
+    }
+
+    @RequestMapping("/getEVById")
+    public TElectricVehicle getElectricVehicleById(@RequestBody Map<String, String> param) {
+
+        return tElectricVehicleService.selectById(param.get("id"));
     }
 }
 
