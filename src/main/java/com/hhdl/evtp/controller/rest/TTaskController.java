@@ -84,6 +84,19 @@ public class TTaskController {
         return "success";
     }
 
+    @RequestMapping("/close")
+    public String closeTask(@RequestBody String owerId) {
+        try {
+            TTask tTask = tTaskService.selectById(owerId);
+            tTask.setState("1");
+            tTaskService.insertOrUpdate(tTask);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return "success";
+    }
+
     @RequestMapping("/delbyId")
     public String delbyId(@RequestBody String id) {
         try {
