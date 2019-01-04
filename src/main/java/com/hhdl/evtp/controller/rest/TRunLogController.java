@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author ${author}
@@ -26,7 +26,7 @@ import java.util.List;
 public class TRunLogController {
     @Autowired
     private TRunLogService tRunLogService;
-    
+
 
     @RequestMapping("/list")
     public List<TRunLog> getList() {
@@ -51,7 +51,13 @@ public class TRunLogController {
     @RequestMapping("/update")
     public String updateTRunLog(@RequestBody TRunLog tRunLog) {
         try {
-            tRunLogService.insertOrUpdate(tRunLog);
+            TRunLog tRunLogOld = tRunLogService.selectById(tRunLog.getId());
+            tRunLogOld.setRemark(tRunLog.getRemark());
+            tRunLogOld.setEndPoint(tRunLog.getEndPoint());
+            tRunLogOld.setEndPointVal(tRunLog.getEndPointVal());
+            tRunLogOld.setEndTime(tRunLog.getEndTime());
+            tRunLogOld.setState(tRunLog.getState());
+            tRunLogService.insertOrUpdate(tRunLogOld);
         } catch (Exception e) {
             System.out.println(e);
         }
