@@ -3,6 +3,7 @@ package com.hhdl.evtp.controller.rest;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.hhdl.evtp.model.TRunLog;
 import com.hhdl.evtp.service.TRunLogService;
 import com.hhdl.evtp.util.UUIDKey;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -27,6 +29,17 @@ public class TRunLogController {
     @Autowired
     private TRunLogService tRunLogService;
 
+    @RequestMapping("/page")
+    public Page getPages(@RequestBody Map map) {
+        int pages = (int) map.get("page");
+        int size = (int) map.get("size");
+
+        Page<TRunLog> page = new Page<TRunLog>(pages, size);
+        Wrapper<TRunLog> tRunLogWrapper = new EntityWrapper<TRunLog>();
+        tRunLogWrapper.orderBy("ower_id", true);
+        tRunLogWrapper.orderBy("start_time", true);
+        return tRunLogService.selectPage(page, tRunLogWrapper);
+    }
 
     @RequestMapping("/list")
     public List<TRunLog> getList() {
