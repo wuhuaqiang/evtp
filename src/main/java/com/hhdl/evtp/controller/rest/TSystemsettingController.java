@@ -47,6 +47,7 @@ public class TSystemsettingController {
             if (tSystemsetting.getId() == null) {
                 tSystemsetting.setId(UUIDKey.getKey());
             }
+            quartzScheduler.modifyJob("job", "group", "0/40 * * * * ?");
             tSystemsettingService.insertOrUpdate(tSystemsetting);
         } catch (Exception e) {
             System.out.println(e);
