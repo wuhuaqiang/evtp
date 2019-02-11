@@ -38,7 +38,15 @@ public class TUser extends Model<TUser> {
     private String createdate;
     private String state;
     private String remark;
+    private Double account;
 
+    public Double getAccount() {
+        return account;
+    }
+
+    public void setAccount(Double account) {
+        this.account = account;
+    }
 
     public String getId() {
         return id;

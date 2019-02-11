@@ -37,6 +37,15 @@ public class TChargingStation extends Model<TChargingStation> {
     private Date createTime;
     @TableField("run_time")
     private Date runTime;
+    private Double account;
+
+    public Double getAccount() {
+        return account;
+    }
+
+    public void setAccount(Double account) {
+        this.account = account;
+    }
 
     public String getId() {
         return id;
