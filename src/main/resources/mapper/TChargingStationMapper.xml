@@ -14,6 +14,7 @@
         <result column="charging_efficiency" property="chargingEfficiency"/>
         <result column="create_time" property="createTime"/>
         <result column="run_time" property="runTime"/>
+        <result column="account" property="account"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -38,7 +39,8 @@
         createTime,
         run_time
         AS
-        runTime
+        runTime,
+        account
     </sql>
 
 </mapper>

@@ -16,6 +16,7 @@
         <result column="createdate" property="createdate"/>
         <result column="state" property="state"/>
         <result column="remark" property="remark"/>
+        <result column="account" property="account"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -34,7 +35,8 @@
         telnumber,
         createdate,
         state,
-        remark
+        remark,
+        account
     </sql>
 
 </mapper>
