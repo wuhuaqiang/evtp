@@ -3,11 +3,8 @@ package com.hhdl.evtp.controller.rest;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.hhdl.evtp.config.QuartzScheduler;
 import com.hhdl.evtp.model.TSystemsetting;
-import com.hhdl.evtp.model.TUser;
 import com.hhdl.evtp.service.TSystemsettingService;
-import com.hhdl.evtp.service.TUserService;
 import com.hhdl.evtp.util.UUIDKey;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +27,14 @@ import java.util.List;
 public class TSystemsettingController {
     @Autowired
     private TSystemsettingService tSystemsettingService;
-    @Autowired
-    private QuartzScheduler quartzScheduler;
+//    @Autowired
+//    private QuartzScheduler quartzScheduler;
 
 
     @RequestMapping("/list")
     public List<TSystemsetting> getList() throws SchedulerException {
         Wrapper<TSystemsetting> tUserWrapper = new EntityWrapper<TSystemsetting>();
-        quartzScheduler.modifyJob("job", "group", "0/20 * * * * ?");
+//        quartzScheduler.modifyJob("job", "group", "0/20 * * * * ?");
         return tSystemsettingService.selectList(tUserWrapper);
     }
 
@@ -47,7 +44,7 @@ public class TSystemsettingController {
             if (tSystemsetting.getId() == null) {
                 tSystemsetting.setId(UUIDKey.getKey());
             }
-            quartzScheduler.modifyJob("job", "group", "0/40 * * * * ?");
+//            quartzScheduler.modifyJob("job", "group", "0/40 * * * * ?");
             tSystemsettingService.insertOrUpdate(tSystemsetting);
         } catch (Exception e) {
             System.out.println(e);

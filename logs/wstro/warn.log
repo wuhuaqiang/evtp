@@ -1,6 +1,100 @@
-[WARN][2018-12-07 12:47:31] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable(DefaultHandlerExceptionResolver.java:384) Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unrecognized token 'userId': was expecting ('true', 'false' or 'null')
- at [Source: java.io.PushbackInputStream@4a382b1c; line: 1, column: 8]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'userId': was expecting ('true', 'false' or 'null')
- at [Source: java.io.PushbackInputStream@4a382b1c; line: 1, column: 8] 
-[WARN][2018-12-07 12:47:42] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable(DefaultHandlerExceptionResolver.java:384) Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unrecognized token 'userId': was expecting ('true', 'false' or 'null')
- at [Source: java.io.PushbackInputStream@82f89e6; line: 1, column: 8]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'userId': was expecting ('true', 'false' or 'null')
- at [Source: java.io.PushbackInputStream@82f89e6; line: 1, column: 8] 
+[WARN][2019-03-13 12:59:03] org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'applicationStartQuartzJobListener': Unsatisfied dependency expressed through field 'quartzScheduler'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hhdl.evtp.config.QuartzScheduler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+[ERROR][2019-03-13 12:59:03] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field quartzScheduler in com.hhdl.evtp.config.ApplicationStartQuartzJobListener required a bean of type 'com.hhdl.evtp.config.QuartzScheduler' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hhdl.evtp.config.QuartzScheduler' in your configuration.
+ 
+[WARN][2019-03-13 13:01:06] org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'applicationStartQuartzJobListener': Unsatisfied dependency expressed through field 'quartzScheduler'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hhdl.evtp.config.QuartzScheduler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+[ERROR][2019-03-13 13:01:06] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field quartzScheduler in com.hhdl.evtp.config.ApplicationStartQuartzJobListener required a bean of type 'com.hhdl.evtp.config.QuartzScheduler' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hhdl.evtp.config.QuartzScheduler' in your configuration.
+ 
+[WARN][2019-03-13 13:04:03] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[ERROR][2019-03-13 13:04:03] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+ 
+[WARN][2019-03-13 13:04:43] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:07:35] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:08:55] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:13:10] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:15:59] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:18:25] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:22:57] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:24:23] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:27:25] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[ERROR][2019-03-13 13:34:12] com.hhdl.evtp.controller.advice.DataExceptionAdvice.paramsBindException(DataExceptionAdvice.java:25) MissingServletRequestParameterException ocurred,path:Required String parameter 'account' is not present 
+[WARN][2019-03-13 13:34:13] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:140) Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'account' is not present] 
+[WARN][2019-03-13 13:39:29] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:49:54] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 13:50:51] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:11:25] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:15:45] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:22:27] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:23:48] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:27:17] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:28:07] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:34:54] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:42:07] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:42:07] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:42:07] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:48:29] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:48:29] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:48:29] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 14:59:44] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:59:44] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 14:59:45] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:00:10] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:00:10] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:00:11] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:33:33] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:33:34] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:33:34] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:35:04] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:35:04] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:35:05] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:36:42] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:36:42] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:36:42] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:36:54] org.hyperledger.fabric.sdk.helper.Config.<init>(Config.java:127) Failed to load any configuration from: config.properties. Using toolkit defaults 
+[WARN][2019-03-13 15:37:53] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.FabricConfigModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:37:53] com.baomidou.mybatisplus.mapper.AutoSqlInjector.injectSql(AutoSqlInjector.java:131) class com.hhdl.evtp.model.UserModel ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method. 
+[WARN][2019-03-13 15:37:53] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:237) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[WARN][2019-03-13 15:38:08] org.hyperledger.fabric.sdk.helper.Config.<init>(Config.java:127) Failed to load any configuration from: config.properties. Using toolkit defaults 
