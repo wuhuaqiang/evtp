@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.hhdl.evtp.model.TSystemsetting;
 import com.hhdl.evtp.service.TSystemsettingService;
 import com.hhdl.evtp.util.UUIDKey;
-import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +31,7 @@ public class TSystemsettingController {
 
 
     @RequestMapping("/list")
-    public List<TSystemsetting> getList() throws SchedulerException {
+    public List<TSystemsetting> getList()  {//throws SchedulerException
         Wrapper<TSystemsetting> tUserWrapper = new EntityWrapper<TSystemsetting>();
 //        quartzScheduler.modifyJob("job", "group", "0/20 * * * * ?");
         return tSystemsettingService.selectList(tUserWrapper);

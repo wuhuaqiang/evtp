@@ -49,3 +49,19 @@ Action:
 Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
  
 [ERROR][2019-03-13 13:34:12] com.hhdl.evtp.controller.advice.DataExceptionAdvice.paramsBindException(DataExceptionAdvice.java:25) MissingServletRequestParameterException ocurred,path:Required String parameter 'account' is not present 
+[ERROR][2019-03-13 16:03:05] org.hyperledger.fabric.sdk.transaction.InstallProposalBuilder.createNetModeTransaction(InstallProposalBuilder.java:235) The project source directory does not exist: /opt/gopath/src/github.com/hyperledger/fabric/kafkapeer/chaincode/go/example02 
+[ERROR][2019-03-13 16:45:13] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8089 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8089, or configure this application to listen on another port.
+ 
+[ERROR][2019-03-13 17:12:21] org.hyperledger.fabric.sdk.transaction.InstallProposalBuilder.createNetModeTransaction(InstallProposalBuilder.java:235) The project source directory does not exist: /opt/gopath/src/github.com/hyperledger/fabric/kafkapeer/chaincode/go/example02 
