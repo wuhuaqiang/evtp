@@ -33,7 +33,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("*")
-                .allowedOrigins("http://10.168.1.216:3001")
+                .allowedOrigins("http://10.168.1.235:3001")
                 .allowedMethods("GET", "POST")
                 .allowCredentials(false).maxAge(3600);
     }
