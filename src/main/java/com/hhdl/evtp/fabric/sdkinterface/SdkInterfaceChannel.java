@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
@@ -194,7 +195,15 @@ public class SdkInterfaceChannel extends SdkInterfaceBase {
     public Map<String, String> createChannel() throws InvalidArgumentException, IOException, TransactionException {
         this.client.setUserContext(this.org.getUser("Admin"));
         //初始化 ChannelConfiguration 对象.参数是通道初始化文件路径
-        ChannelConfiguration channelConfiguration = new ChannelConfiguration(new File("./channel-artifacts/"+this.channelName + ".tx"));
+        ClassLoader classLoader = getClass().getClassLoader();
+        URL url = classLoader.getResource("./channel-artifacts/"+this.channelName+ ".tx");
+        /**
+         * url.getFile() 得到这个文件的绝对路径
+         */
+        System.out.println(url.getFile());
+//        File file = new File(url.getFile());
+//        new File("./channel-artifacts/"+this.channelName + ".tx")
+        ChannelConfiguration channelConfiguration = new ChannelConfiguration(new File(url.getFile()));
         int OrderersCount = this.org.getOrderers().size();
         for (int i = 0; i < OrderersCount; i++) {
             Properties ordererProperties = new Properties();
