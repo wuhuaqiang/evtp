@@ -9,6 +9,7 @@ import org.hyperledger.fabric.sdk.exception.ProposalException;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
@@ -139,7 +140,10 @@ public class SdkInterfaceChaincode extends SdkInterfaceBase {
         instantiateProposalRequest.setArgs(args);
 
         ChaincodeEndorsementPolicy chaincodeEndorsementPolicy = new ChaincodeEndorsementPolicy();
-        chaincodeEndorsementPolicy.fromYamlFile(new File(this.chaincodePolicy));//"code/src/policy/chaincodeendorsementpolicy.yaml"));
+        ClassLoader classLoader = getClass().getClassLoader();
+        URL url = classLoader.getResource(this.chaincodePolicy);
+
+        chaincodeEndorsementPolicy.fromYamlFile(new File(url.getFile()));//"code/src/policy/chaincodeendorsementpolicy.yaml"));
         instantiateProposalRequest.setChaincodeEndorsementPolicy(chaincodeEndorsementPolicy);
 
         Map<String, byte[]> tm2 = new HashMap<>();
@@ -167,7 +171,9 @@ public class SdkInterfaceChaincode extends SdkInterfaceBase {
         upgradeProposalRequest.setArgs(args);
 
         ChaincodeEndorsementPolicy chaincodeEndorsementPolicy = new ChaincodeEndorsementPolicy();
-        chaincodeEndorsementPolicy.fromYamlFile(new File(this.chaincodePolicy));//"code/src/policy/chaincodeendorsementpolicy.yaml"));
+        ClassLoader classLoader = this.getClass().getClassLoader();
+        URL url = classLoader.getResource(this.chaincodePolicy);
+        chaincodeEndorsementPolicy.fromYamlFile(new File(url.getFile()));//"code/src/policy/chaincodeendorsementpolicy.yaml"));
         upgradeProposalRequest.setChaincodeEndorsementPolicy(chaincodeEndorsementPolicy);
 
         Map<String, byte[]> tm2 = new HashMap<>();
