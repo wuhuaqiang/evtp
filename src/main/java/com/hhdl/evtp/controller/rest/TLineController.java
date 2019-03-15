@@ -1,13 +1,16 @@
 package com.hhdl.evtp.controller.rest;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.hhdl.evtp.entity.HttpClientResult;
 import com.hhdl.evtp.model.TLine;
 import com.hhdl.evtp.model.TUser;
 import com.hhdl.evtp.service.TLineService;
 import com.hhdl.evtp.service.TUserService;
+import com.hhdl.evtp.util.HttpClientUtils;
 import com.hhdl.evtp.util.UUIDKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +34,7 @@ public class TLineController {
     private TUserService tUserService;
 
     @RequestMapping("/list")
-    public List<TLine> getPage() {
+    public List<TLine> getPage() throws Exception {
         Wrapper<TLine> tLineWrapper = new EntityWrapper<TLine>();
 //        tLineWrapper.where("name={0}", "Line1").orderBy("ower_id", true).orderBy("sort", true);
         tLineWrapper.orderBy("ower_id", true).orderBy("sort", true);

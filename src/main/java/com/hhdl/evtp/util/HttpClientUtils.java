@@ -33,6 +33,8 @@ public class HttpClientUtils {
 
     // 请求获取数据的超时时间(即响应时间)，单位毫秒。
     private static final int SOCKET_TIMEOUT = 6000;
+    // 百度地图密匙。
+    private static final String BAIDU_APP_KEY = "s2XOyHgiskswbq9kvSLtLnMnbBWC3dTm";
 
     /**
      * 发送get请求；不带请求头和请求参数
@@ -78,7 +80,7 @@ public class HttpClientUtils {
                 uriBuilder.setParameter(entry.getKey(), entry.getValue());
             }
         }
-
+        uriBuilder.setParameter("ak", BAIDU_APP_KEY);
         // 创建http对象
         HttpGet httpGet = new HttpGet(uriBuilder.build());
         /**
