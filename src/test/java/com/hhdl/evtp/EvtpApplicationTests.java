@@ -49,7 +49,7 @@ public class EvtpApplicationTests {
     public void httpClient() throws Exception {
         Map param = new HashMap();
         param.put("output", "json");
-        param.put("origins", "40.45,116.34");
+        param.put("origins", "40.45,116.34|40.54,116.35|40.59,116.45|40.50,116.30");
         param.put("destinations", "40.34,116.45");
         HttpClientResult httpClientResult = HttpClientUtils.doGet("http://api.map.baidu.com/routematrix/v2/driving", param);
         JSONObject jsonObject = JSONObject.parseObject(httpClientResult.getContent());
@@ -58,9 +58,9 @@ public class EvtpApplicationTests {
         System.out.println(map.get("result"));
         Map param1 = new HashMap();
 //        param.put("output", "json");
-        param.put("origin", "40.01116,116.339303");
-        param.put("destination", "39.936404,116.452562");
-        HttpClientResult httpClientResult1 = HttpClientUtils.doGet("http://api.map.baidu.com/direction/v2/driving", param);
+        param1.put("origin", "40.01116,116.339303");
+        param1.put("destination", "39.936404,116.452562");
+        HttpClientResult httpClientResult1 = HttpClientUtils.doGet("http://api.map.baidu.com/direction/v2/driving", param1);
         JSONObject jsonObject1 = JSONObject.parseObject(httpClientResult1.getContent());
         Map<String, Object> map1 = new HashMap<String, Object>();
         map1.putAll(jsonObject1);
