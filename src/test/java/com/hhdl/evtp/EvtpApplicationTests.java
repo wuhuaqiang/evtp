@@ -58,8 +58,8 @@ public class EvtpApplicationTests {
         System.out.println(map.get("result"));
         Map param1 = new HashMap();
 //        param.put("output", "json");
-        param1.put("origin", "40.01116,116.339303");
-        param1.put("destination", "39.936404,116.452562");
+        param1.put("origin", "30.601895,104.125617");
+        param1.put("destination", "30.789706,104.057202");
         HttpClientResult httpClientResult1 = HttpClientUtils.doGet("http://api.map.baidu.com/direction/v2/driving", param1);
         JSONObject jsonObject1 = JSONObject.parseObject(httpClientResult1.getContent());
         Map<String, Object> map1 = new HashMap<String, Object>();
