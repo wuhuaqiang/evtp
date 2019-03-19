@@ -1,19 +1,30 @@
 package com.hhdl.evtp;
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.hhdl.evtp.entity.HttpClientResult;
+import com.hhdl.evtp.model.TPoint;
+import com.hhdl.evtp.service.TPointService;
 import com.hhdl.evtp.util.HttpClientUtils;
+import com.hhdl.evtp.util.MapUtil;
+import com.hhdl.evtp.util.Point;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EvtpApplicationTests {
+    @Autowired
+    private TPointService tPointService;
 
     @Test
     public void contextLoads() {
@@ -45,6 +56,7 @@ public class EvtpApplicationTests {
 //        queryBlockChain(client, "query", "ACCOUNT1");
 
     }
+
     @Test
     public void httpClient() throws Exception {
         Map param = new HashMap();
@@ -65,6 +77,20 @@ public class EvtpApplicationTests {
         Map<String, Object> map1 = new HashMap<String, Object>();
         map1.putAll(jsonObject1);
         System.out.println(map1.get("result"));
+    }
+
+    @Test
+    public void mapUtilTest() throws Exception {
+        Wrapper<TPoint> wrapper = new EntityWrapper<TPoint>();
+        List<TPoint> tPoints = tPointService.selectList(wrapper);
+        List<Point> points = new ArrayList<Point>();
+        for (TPoint tPoint : tPoints) {
+            Point point = new Point(Double.valueOf(tPoint.getLat()), Double.valueOf(tPoint.getLag()));
+            points.add(point);
+        }
+        // 104.09565,30.570682  104.069401,30.571895 104.154597,30.576201
+        Point test = new Point(30.576201, 104.154597);
+        System.out.println(MapUtil.isPointInPolygon(test, points));
     }
 
 }

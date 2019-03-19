@@ -18,7 +18,7 @@ public class Point {
     public Double Y;
 
 
-    Point(Double x, Double y) {
+    public Point(Double x, Double y) {
 
 
         x = x == null ? 0 : x;
