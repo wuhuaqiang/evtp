@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.hhdl.evtp.model.TDestination;
 import com.hhdl.evtp.service.TDestinationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +31,17 @@ public class TDestinationController {
         Wrapper<TDestination> tDestinationWrapper = new EntityWrapper<TDestination>();
 //        tLineWrapper.where("name={0}", "Line1").orderBy("ower_id", true).orderBy("sort", true);
         return tDestinationService.selectList(tDestinationWrapper);
+    }
+
+    @RequestMapping("/delbyId")
+    public String delbyId(@RequestBody String id) {
+        try {
+            tDestinationService.deleteById(id);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return "success";
     }
 }
 
